@@ -1,8 +1,8 @@
-FROM node:alpine as builder
+FROM node:lts-alpine as builder
 
 WORKDIR '/usr/app'
 
-COPY ./package.json ./
+COPY package.json .
 RUN npm install
 
 COPY . .
